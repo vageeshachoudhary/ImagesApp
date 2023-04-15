@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/card_view"
+    android:layout_margin="5dp"
+    app:cardCornerRadius="12dp"
+    app:contentPadding="4dp"
+    app:cardElevation="3dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars"
+            android:contentDescription="@string/animal"/>
+
+        <TextView
+            android:id="@+id/tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/tags"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <TextView
+            android:id="@+id/likes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/likes"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/tags"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
